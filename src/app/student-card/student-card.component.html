@@ -1,0 +1,60 @@
+
+
+
+<input  type="text" placeholder="search" [(ngModel)]="term" (keyup)="filterByTerm()"><br><br>
+
+<select  [(ngModel)]="column">
+
+    <option value="name">Name</option>
+    <option value="city">City</option>
+</select>
+
+<select [(ngModel)]="order">
+    <option value="asc">AscendingOrder</option>
+    <option value="desc">DescendingOrder</option>
+</select>
+<button (click)="sorted()">Sort</button>
+
+
+
+
+<div class="studentIdCard">
+<div  class="idCard" *ngFor="let student of students">
+    <div  class="card-top">
+      
+      <img src="{{student.school_logo}}" alt=""  width="100px">
+      <span  style="font-size: medium; font-weight: 500; margin-left: 20px;">{{student.school_name}}</span>
+    </div>
+    <div class="card-body">
+        <img class="image" src="{{student.profile_picture}}" alt=""  width="100px" height="120px">
+        NAME: <span>{{student.name}}</span><br>
+        PHONE: <span>{{student.phone}}</span><br>
+        DOB: <span>{{student.dob}}</span><br>
+        CITY: <span>{{student.city}}</span><br>
+        EMAIL: <span>{{student.email}}</span><br>
+
+    </div >
+       
+    <div class="card-bottom">
+        School City: <span>{{student.school_city}}</span>
+        <span style="float:right; margin-left:20px;">School Pin: {{student.school_pin}}</span><br>
+   
+    <button style="margin-left: 30px; background-color: green;">View</button>
+    <button  style="  float:right ;margin-right: 70px; background-color: red;">Delete</button>
+    <button  style="  float:right ;margin-right: 60px; background-color: burlywood;">Edit</button>
+   
+    </div><br><br>
+</div>
+</div>
+<!-- 
+"name": "Melba O'Reilly Sr.",
+"phone": "540-267-5363 x17003",
+"city": "Muncie",
+"dob": "1946-08-15T09:09:17.779Z",
+"profile_picture": "https://loremflickr.com/640/480/people",
+"email": "Joseph16@hotmail.com",
+"school_logo": "https://loremflickr.com/640/480/abstract",
+"school_name": "Ledner Group",
+"school_city": "Carletonville",
+"school_pin": "68514-8924",
+"id": "49" -->

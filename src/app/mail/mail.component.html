@@ -1,0 +1,3 @@
+<div  *ngFor ="let mail of mails">
+<h3 [ngClass]="{ 'bright': mail.completed, 'dim': !mail.completed }">  {{mail.id}}   &nbsp; {{mail.title}}</h3>
+</div>

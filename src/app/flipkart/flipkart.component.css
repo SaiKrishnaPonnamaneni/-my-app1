@@ -1,0 +1,58 @@
+.container-1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-around;
+    gap: 10px;
+    
+    
+}
+.product{
+    position: relative;
+            display: inline-block;
+}
+img{
+    display: block;
+    
+}
+
+.container-2{
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    background-color: white;
+    border: black solid;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    
+
+}
+h5{
+    text-wrap: 200;
+    animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+.rating-box{
+    position: absolute;
+    bottom: 3px;
+    left: 5px;
+    display: inline-block;
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #5b5555;
+    color: white; /* Add this line to make the text color white */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    
+}
+.rating-box .rating {
+    font-size: 1.0em;
+    color: #f39c12;
+    margin-right: 5px;
+}
+
+.rating-box .count {
+    font-size: 0.7em;
+    color: #777;
+}

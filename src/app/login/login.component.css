@@ -1,0 +1,22 @@
+.login{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: rgba(12,120,200,05);
+  width: 300px;
+  height: 250px;
+  margin:auto;
+    
+}
+
+.background{
+    width: auto;
+    min-height: 650px;
+    background-image: url("/assets/logInImage.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+}

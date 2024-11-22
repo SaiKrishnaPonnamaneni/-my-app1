@@ -1,0 +1,10 @@
+<div class="container-1">
+    <div class="image-container" *ngFor="let pinterest of pinterests">
+      <img [src]="pinterest.download_url" alt="Image" width="100px">
+      <div class="overlay">
+        <p>{{pinterest.author}}</p>
+        <a [href]="pinterest.download_url" class="btn btn-primary" download>Download</a>
+      </div>
+    </div>
+  </div>
+  

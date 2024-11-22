@@ -1,0 +1,8 @@
+
+   <div style="background-color: black;"> <div class="container-1" *ngFor="let rating of ratings">
+    <h2 style="color:yellow">  {{rating.movie}} </h2>
+    <h5 style="color:white" class="movie-rating">Rating : {{rating.rating}} <span *ngFor="let star of [].constructor(getStars(rating.rating))">★</span></h5>
+    <div><a href="imdb_url" class="button"  >View On Imdb</a></div>
+</div>
+</div>
+

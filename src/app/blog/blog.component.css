@@ -1,0 +1,14 @@
+.blog{
+    
+    border-radius: 10px;
+    background-color: white;
+    justify-content: center;
+   margin-left: 40px;
+   margin-right: 40px;
+    
+
+}
+.container-1{
+  justify-content: space-around;
+  align-items: center;
+}

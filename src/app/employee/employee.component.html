@@ -1,0 +1,55 @@
+<h1>Employees</h1>
+
+<label for="">Name:</label>
+<input type="text" [(ngModel)]="name">
+<label for="">Experiece:</label>
+<input type="text" [(ngModel)]="experience">
+<label for="">Package:</label>
+<input type="text" [(ngModel)]="package">
+<label for="">Role:</label>
+<input type="text" [(ngModel)]="empRole">
+<br>
+<button class="btn btn-primary" (click)="add()">add</button>
+<br>
+
+<button (click)="bonus()" class="btn btn-info"> 50k Bonus</button>
+<button (click)="hike()" class="btn btn-info"> Hike</button>
+
+<input  type="text" placeholder="enter name" [(ngModel)]="term" (keyup)="search()"><br><br>
+
+
+<select class="form-control w-25" [(ngModel)]="role" (change)="roleFilter()">
+    <option value="" disabled>select role</option>
+    <option>UIDeveloper</option>
+    <option>Software Developer</option>
+    <option>data Engineer</option>
+    <option>Testing Engineer</option>
+</select ><br>
+<button (click)="total()" class="btn btn-primary"> Cost To Company </button>
+
+<button (click)="packageh2()" class="btn btn-warning">Pckages Low To High</button>
+
+<button (click)="packageh1()" class="btn btn-warning">Pckages High To Low</button>
+<table class="table table-dark">
+    <thead>
+        <th>Sno.</th>
+        <th>Name</th>
+        <th>Experience</th>
+        <th>Package</th>
+        <th>Role</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees; let i=index">
+            <td>{{i+1}}</td>
+            <td [ngClass]="{'text-danger':employee.package<1000000,'text-success':employee.package>=1000000}">{{employee.name}}</td>
+            <td>{{employee.experience}}</td>
+            <td>{{employee.package}}</td>
+            <td>{{employee.role}}</td>
+            <td>
+                <button *ngIf="employee.package>500000" (click)="delete(i)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

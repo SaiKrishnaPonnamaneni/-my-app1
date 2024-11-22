@@ -1,0 +1,38 @@
+
+<h5 *ngFor="let age of ages">Age is : {{age}}</h5>
+
+<ul>
+    <li *ngFor="let state of states"> {{state}}</li>
+</ul>
+
+
+<select>
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+
+<h2 *ngFor="let product of products">{{product.name}} price is: {{product.price}}</h2>
+
+<table border="1" class="table table-dark">
+    <thead>
+        <th>SNO</th>
+        <th>Name</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products; let i=index">
+            <td>{{i+1}}</td>
+            <!-- to change uppercase use this -->
+
+            <td>{{product.name|uppercase}}</td>
+            <!-- use this two condtions -->
+            <!-- <td [ngStyle]="{'color':product.price<1000?  'green':'red'}">{{product.price}}</td> -->
+             <!-- Use this more than two condition -->
+            <td [ngClass]="{'green':product.price<1000, 'red': product.price>1000}">{{product.price}}</td>
+        </tr>
+    </tbody>
+</table>
+<h1 *ngIf="true">Hello</h1>
+
+<h1>{{today}}</h1>
+<h1>{{today|date}}</h1>
+<h1>{{today|date:"dd/MM/yyyy"}}</h1>

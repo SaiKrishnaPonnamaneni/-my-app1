@@ -1,0 +1,37 @@
+<br>
+<div>
+    <label for="">Name</label>
+    <input type="text" [(ngModel)]="name">
+    <button (click)="register()" >Register</button><br>
+
+    <ol>
+        <li *ngFor="let name of names">{{name}}</li>
+    </ol>
+</div><br>
+<!-- Employee Data -->
+ 
+    <label for="">EMP_ID</label>
+    <input type="number"  [(ngModel)]="empId">
+    <label for="">EMP_NAME</label>
+    <input type="text"  [(ngModel)]="empName">
+    <label for="" >EMP_ROLE</label>
+    <input type="text"  [(ngModel)]="empRole">
+    <button (click)="add()">Register</button><br><br>
+
+
+<div>
+    <table border="1" class="table table-dark"  >
+        <thead>
+            <th>EMP_ID</th>
+            <th>EMP_NAME</th>
+            <th>EMP_ROLE</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{employee.id}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.role}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

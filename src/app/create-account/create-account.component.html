@@ -1,0 +1,37 @@
+<h2>Create Account</h2>
+
+<div>
+
+    <form [formGroup]="accountForm">
+        <label for="">Account Name</label>
+        <input type="text" formControlName="account_name">
+        <br><br>
+
+        <label for="">Available Balace</label>
+        <input type="text" formControlName="available_balance">
+        <br><br>
+
+        
+        <label for="">Account Number</label>
+        <input type="text"  formControlName="account_number">
+        <br><br>
+
+        <label for="">City</label>
+        <input type="text"  formControlName="city">
+        <br><br>
+        
+        <label for="">Profile Picture</label>
+        <input type="text"  formControlName="profie_picture">
+        <br><br>
+
+        <button (click)="submit()">submit</button>
+    </form>
+</div>
+
+
+<!-- account_name": "Home Loan Account",
+"available_balance": "350.15",
+"account_number": 34876,
+"city": "Toms River",
+"profie_picture": "https://loremflickr.com/640/480/people",
+"id": "26" -->

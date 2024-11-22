@@ -1,0 +1,19 @@
+
+<h2 style="text-align: center;">Body Mass Index Calculator</h2><br><br><br><br><br>
+<div class="bmi-container"><div class="bmi">
+    <div>
+
+        
+        Weight<input type="number"  [(ngModel)]="weight"><br><br>
+
+        Height<input type="number" [(ngModel)]="height">
+    </div><br>
+
+ <button class="button" (click)="calculate()">Calculate</button>
+   
+    <h3 style="color:red">{{result}}</h3>
+    
+</div>
+<img src="/assets/BMI.webp" width="50%">
+</div>
+

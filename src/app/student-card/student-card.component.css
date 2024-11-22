@@ -1,0 +1,33 @@
+
+.studentIdCard{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-around;
+    gap: 10px;
+
+}
+.idCard{
+   
+    width: 400PX;
+    height: 300px;
+    border-radius: 20px;
+    margin:20px;
+    
+}
+.card-top{
+    padding: 10px;
+    background-color: rgb(135, 234, 234);
+}
+.card-body{
+    padding:10px;
+    background-color: azure;
+}
+.card-bottom{
+    padding:10px;
+    background-color: aquamarine;
+}
+.image{
+    float:right;
+   
+}
