@@ -24,6 +24,7 @@ import { ImdbComponent } from './imdb/imdb.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { StudentCardComponent } from './student-card/student-card.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 const routes: Routes = [{
   path:"dashboard",component:DashboardComponent, children:[
@@ -49,6 +50,7 @@ const routes: Routes = [{
 {path:"create-vehicle",component:CreateVehicleComponent},
 {path:"create-account",component:CreateAccountComponent},
 {path:"student-card",component:StudentCardComponent },
+{path:"create-student",component:CreateStudentComponent},
 ]
 },
 {path:"login",component:LoginComponent},
