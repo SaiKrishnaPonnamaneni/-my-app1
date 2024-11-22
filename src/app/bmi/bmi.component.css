@@ -3,6 +3,10 @@
     display: flex;
     float:right;
 }*/
+
+h2{
+  color:chartreuse;
+}
 img {
     position: absolute;
     right: 0;
