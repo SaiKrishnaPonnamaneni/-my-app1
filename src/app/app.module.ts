@@ -29,6 +29,7 @@ import { ImdbComponent } from './imdb/imdb.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { StudentCardComponent } from './student-card/student-card.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 
 
@@ -58,7 +59,8 @@ import { StudentCardComponent } from './student-card/student-card.component';
     ImdbComponent,
     CreateVehicleComponent,
     CreateAccountComponent,
-    StudentCardComponent
+    StudentCardComponent,
+    CreateStudentComponent
   ],
   imports: [
     BrowserModule,
