@@ -30,6 +30,7 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { StudentCardComponent } from './student-card/student-card.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 
 
@@ -60,7 +61,8 @@ import { CreateStudentComponent } from './create-student/create-student.componen
     CreateVehicleComponent,
     CreateAccountComponent,
     StudentCardComponent,
-    CreateStudentComponent
+    CreateStudentComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
