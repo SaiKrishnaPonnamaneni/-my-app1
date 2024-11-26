@@ -1,0 +1,13 @@
+
+/* .form{
+    justify-items: center;
+    justify-content: space-around;
+    margin:20px
+} */
+label{
+    width: 130px;
+    margin: 10px;
+}
+.error{
+    color:red
+}
