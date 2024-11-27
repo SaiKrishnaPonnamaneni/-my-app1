@@ -1,12 +1,11 @@
 <div class="background">
-    <div class="login">
-        <dl>
-            <dd>Email</dd>
-            <dt><input type="email"></dt>
-            <dd>Password</dd>
-            <dt><input type="password"></dt>
-        </dl>
+    <form class="login" [formGroup]="loginForm">
+       <label for="">Email</label>
+       <input type="text" formControlName="email">
+        
+       <label for="">Password</label>
+       <input type="text" formControlName="password">
 
-        <button routerLink="/dashboard">LogIn</button>
-    </div>
+        <button (click)="login()" >LogIn</button>
+    </form>
 </div>
