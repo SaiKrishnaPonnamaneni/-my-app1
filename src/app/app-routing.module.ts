@@ -26,9 +26,10 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { StudentCardComponent } from './student-card/student-card.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [{
-  path:"dashboard",component:DashboardComponent, children:[
+  path:"dashboard",canActivate:[AuthenticationGuard], component:DashboardComponent, children:[
     {path:"home",component:HomeComponent},
   {path:"welcome",component:WelcomeComponent},
 {path:"calculator",component:CalculatorComponent},
