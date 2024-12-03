@@ -27,6 +27,8 @@ import { StudentCardComponent } from './student-card/student-card.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { AuthenticationGuard } from './authentication.guard';
+import { VehicleDetailsComponent } from './vehicle.details/vehicle.details.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 const routes: Routes = [{
   path:"dashboard",canActivate:[AuthenticationGuard], component:DashboardComponent, children:[
@@ -53,7 +55,11 @@ const routes: Routes = [{
 {path:"create-account",component:CreateAccountComponent},
 {path:"student-card",component:StudentCardComponent },
 {path:"create-student",component:CreateStudentComponent},
-{path:"create-user",component:CreateUserComponent}
+{path:"create-user",component:CreateUserComponent},
+{path:'vehicle.details/:id',component:VehicleDetailsComponent},
+{path:'edit-vehicle/:id',component:CreateVehicleComponent},
+{path:'account-details/:id',component:AccountDetailsComponent},
+{path:'edit-account/:id', component:CreateAccountComponent}
 ]
 },
 {path:"login",component:LoginComponent},
