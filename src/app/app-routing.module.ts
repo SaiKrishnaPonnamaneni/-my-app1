@@ -29,6 +29,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { VehicleDetailsComponent } from './vehicle.details/vehicle.details.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 const routes: Routes = [{
   path:"dashboard",canActivate:[AuthenticationGuard], component:DashboardComponent, children:[
@@ -59,7 +60,9 @@ const routes: Routes = [{
 {path:'vehicle.details/:id',component:VehicleDetailsComponent},
 {path:'edit-vehicle/:id',component:CreateVehicleComponent},
 {path:'account-details/:id',component:AccountDetailsComponent},
-{path:'edit-account/:id', component:CreateAccountComponent}
+{path:'edit-account/:id', component:CreateAccountComponent},
+{path:'student-details/:id',component:StudentDetailsComponent},
+{path:'student-edit/:id',component:CreateStudentComponent},
 ]
 },
 {path:"login",component:LoginComponent},
