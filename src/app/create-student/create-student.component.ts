@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { StudentCardService } from '../student-card.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-create-student',
@@ -8,8 +9,28 @@ import { StudentCardService } from '../student-card.service';
   styleUrls: ['./create-student.component.css']
 })
 export class CreateStudentComponent {
+  id:string="";
 
-  constructor(private _studentService:StudentCardService){}
+  constructor(private _studentService:StudentCardService, private _activatedRoute:ActivatedRoute){
+
+
+_activatedRoute.params.subscribe(
+
+  (data:any)=>{
+
+    console.log(data);
+    this.id=data.id;
+    //api-call
+    _studentService.getStudent(data.id).subscribe(
+      (data:any)=>{
+        this.studentForm.patchValue(data);
+      }
+    )
+
+  }
+)
+
+  }
 
   public studentForm:FormGroup=new FormGroup(
 
@@ -29,7 +50,21 @@ school_pin: new FormControl(),
 
 submit(){
 
-  // console.log(this.studentForm)
+  if(this.id){
+
+    this._studentService.updateStudent(this.id,this.studentForm.value).subscribe(
+
+      (data:any)=>{
+          alert("Updated Succesfully")
+      },
+      (err:any)=>{
+        alert("Updation Failed")
+      }
+    )
+
+  }else{
+
+    // console.log(this.studentForm)
  this._studentService.addStudents(this.studentForm.value).subscribe(
   (data:any)=>{
     alert("Students Data Uploaded Sucessfullly")
@@ -41,5 +76,9 @@ submit(){
 
 }
 
+
+  }
+
+  
 
 }

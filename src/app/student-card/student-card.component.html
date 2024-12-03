@@ -39,9 +39,9 @@
         School City: <span>{{student.school_city}}</span>
         <span style="float:right; margin-left:20px;">School Pin: {{student.school_pin}}</span><br>
    
-    <button style="margin-left: 30px; background-color: green;">View</button>
+    <button style="margin-left: 30px; background-color: green; " routerLink="/dashboard/student-details/{{student.id}}">View</button>
     <button  style="  float:right ;margin-right: 70px; background-color: red;">Delete</button>
-    <button  style="  float:right ;margin-right: 60px; background-color: burlywood;">Edit</button>
+    <button  style="  float:right ;margin-right: 60px; background-color: burlywood; "  routerLink="/dashboard/student-edit/{{student.id}}">Edit</button>
    
     </div><br><br>
 </div>
