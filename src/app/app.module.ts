@@ -34,6 +34,11 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { VehicleDetailsComponent } from './vehicle.details/vehicle.details.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { SiblingsComponent } from './siblings/siblings.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
 
 
 
@@ -68,7 +73,12 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
     CreateUserComponent,
     VehicleDetailsComponent,
     AccountDetailsComponent,
-    StudentDetailsComponent
+    StudentDetailsComponent,
+    ParentComponent,
+    ChildComponent,
+    SiblingsComponent,
+    Sibling1Component,
+    Sibling2Component
   ],
   imports: [
     BrowserModule,

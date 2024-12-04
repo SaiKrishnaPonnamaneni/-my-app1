@@ -30,6 +30,8 @@ import { AuthenticationGuard } from './authentication.guard';
 import { VehicleDetailsComponent } from './vehicle.details/vehicle.details.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { ParentComponent } from './parent/parent.component';
+import { SiblingsComponent } from './siblings/siblings.component';
 
 const routes: Routes = [{
   path:"dashboard",canActivate:[AuthenticationGuard], component:DashboardComponent, children:[
@@ -63,6 +65,8 @@ const routes: Routes = [{
 {path:'edit-account/:id', component:CreateAccountComponent},
 {path:'student-details/:id',component:StudentDetailsComponent},
 {path:'student-edit/:id',component:CreateStudentComponent},
+{path:'parent',component:ParentComponent},
+{path:'siblings',component:SiblingsComponent}
 ]
 },
 {path:"login",component:LoginComponent},
