@@ -1,6 +1,6 @@
 <form class="form" [formGroup]="userForm">
     <label for="">Name:</label>
-    <input type="text" formControlName="name">
+    <input type="text" formControlName="name" appCapital>
     <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
         <p class="error" *ngIf="userForm.get('name')?.errors?.['required']">Name is required</p>
         <p class="error" *ngIf="userForm.get('name')?.errors?.['minlength']">Minimum 3 characters required</p>
@@ -22,6 +22,8 @@
     <div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
         <p class="error" *ngIf="userForm.get('email')?.errors?.['required']">Email is required</p>
         <p class="error" *ngIf="userForm.get('email')?.errors?.['email']">Invalid email format</p>
+        <p class="error" *ngIf="userForm.get('email')?.errors?.['capgeminiMail']">Only Capgemini mail accepted</p>
+
     </div>
     <br>
 

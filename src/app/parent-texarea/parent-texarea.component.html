@@ -1,0 +1,10 @@
+
+
+<div class="text-center">
+    <h1 >Parent Component - Root Component</h1>
+     <p>{{childData}}</p>
+     <h1>{{bp}}</h1>
+     <input type="text" [(ngModel)]="ap">
+    <app-child-textarea [ac]="ap"   (show)="catch($event)"  (notify)="parentMethod($event)" ></app-child-textarea>
+    
+</div>

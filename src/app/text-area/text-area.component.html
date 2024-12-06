@@ -1,0 +1,9 @@
+<p>text-area works!</p>
+<div class="text-area-container">
+    <textarea [(ngModel)]="text" [maxlength]="max" class="text-area"></textarea>
+    <div class="length-position">
+      <p>{{text.length}}/{{max}}</p>
+    </div>
+  </div>
+  
+

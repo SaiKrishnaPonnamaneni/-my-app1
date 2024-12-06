@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -32,6 +32,8 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { ParentComponent } from './parent/parent.component';
 import { SiblingsComponent } from './siblings/siblings.component';
+import { ParentTexareaComponent } from './parent-texarea/parent-texarea.component';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 
 const routes: Routes = [{
   path:"dashboard",canActivate:[AuthenticationGuard], component:DashboardComponent, children:[
@@ -66,7 +68,13 @@ const routes: Routes = [{
 {path:'student-details/:id',component:StudentDetailsComponent},
 {path:'student-edit/:id',component:CreateStudentComponent},
 {path:'parent',component:ParentComponent},
-{path:'siblings',component:SiblingsComponent}
+{path:'siblings',component:SiblingsComponent},
+{path:'textarea', component:ParentTexareaComponent},
+{path:'about-company',component:AboutCompanyComponent},
+{
+  path: 'payment',
+  loadChildren: () => import('./payment/payment.module').then(m => m.PaymentModule)
+}
 ]
 },
 {path:"login",component:LoginComponent},
@@ -76,12 +84,10 @@ const routes: Routes = [{
 
 
 @NgModule(
-
   
   {
-
   
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes , {preloadingStrategy:PreloadAllModules})], //pre loading rare ga use chestam
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
