@@ -1,0 +1,20 @@
+.text-area-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .text-area {
+    width: 300px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    height: 300px;
+  }
+  
+  .length-position {
+    position: absolute;
+    bottom: 5px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    pointer-events: none; /* Allows you to click through the character count display */
+    background: rgba(255, 255, 255, 0.5); /* Optional: to make text more readable */
+    padding: 2px 5px; /* Optional: for better readability */
+  }
+  

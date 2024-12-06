@@ -7,8 +7,12 @@
 
             <div class="rating-box">
                 <span class="rating">{{product.rating.rate}}</span>
+                <app-star [rating]="product.rating.rate"></app-star>
+
+                
                 <span class="count">({{ product.rating.count}})</span>
             </div>
+            
         </div>
 
         <h4>{{product.category}}</h4>
